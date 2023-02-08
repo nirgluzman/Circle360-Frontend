@@ -1,0 +1,41 @@
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* override browser default */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-btn:hover {
+  transform: scale(1.1);
+}
+
+.map-container {
+  align-self: center;
+  width: 30vw;
+  height: 30vh;
+  margin: 10 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .map-container {
+    align-self: center;
+    width: 60vw;
+    height: 30vh;
+    margin: 10 auto;
+  }
+}
+@media only screen and (max-width: 430px) {
+  /* For mobile phones: */
+  .map-container {
+    align-self: center;
+    width: 80vw;
+    height: 30vh;
+    margin: 10 auto;
+  }
+}

@@ -13,7 +13,6 @@ import {
   Image,
   SwitchField,
   Text,
-  TextField,
   View,
 } from "@aws-amplify/ui-react";
 export default function CircleSettingsHeader(props) {
@@ -44,28 +43,6 @@ export default function CircleSettingsHeader(props) {
         children="INVITE NEW MEMBER"
         {...getOverrideProps(overrides, "InviteNewMemberButton")}
       ></Button>
-      <Icon
-        width="21px"
-        height="24px"
-        viewBox={{ minX: 0, minY: 0, width: 21, height: 24 }}
-        paths={[
-          {
-            d: "M0 19.0007L0 24L4.37441 24L17.276 9.25534L12.9016 4.25601L0 19.0007ZM20.6589 3.50945L17.9292 0.389872C17.8213 0.266284 17.6931 0.168234 17.552 0.101335C17.4109 0.0344353 17.2596 5.92039e-16 17.1068 0C16.9541 0 16.8028 0.0344353 16.6617 0.101335C16.5206 0.168234 16.3924 0.266284 16.2845 0.389872L14.1497 2.82954L18.5242 7.82886L20.6589 5.38919C20.767 5.26586 20.8528 5.11936 20.9113 4.95809C20.9699 4.79681 21 4.62392 21 4.44932C21 4.27472 20.9699 4.10183 20.9113 3.94056C20.8528 3.77928 20.767 3.63278 20.6589 3.50945L20.6589 3.50945Z",
-            fill: "rgba(0,0,0,1)",
-            fillRule: "nonzero",
-          },
-        ]}
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="15%"
-        bottom="77.5%"
-        left="47.44%"
-        right="47.18%"
-        {...getOverrideProps(overrides, "EditIcon")}
-      ></Icon>
       <View
         padding="0px 0px 0px 0px"
         width="114px"
@@ -144,19 +121,6 @@ export default function CircleSettingsHeader(props) {
         objectFit="cover"
         {...getOverrideProps(overrides, "ProfileImage")}
       ></Image>
-      <TextField
-        placeholder="Group"
-        width="192px"
-        height="46px"
-        position="absolute"
-        top="calc(50% - 23px - 63px)"
-        left="calc(50% - 96px - 1px)"
-        size="large"
-        isDisabled={false}
-        labelHidden={true}
-        variation="default"
-        {...getOverrideProps(overrides, "GroupField")}
-      ></TextField>
       <View
         padding="0px 0px 0px 0px"
         width="261px"
@@ -206,6 +170,30 @@ export default function CircleSettingsHeader(props) {
           {...getOverrideProps(overrides, "PushSwitchField")}
         ></SwitchField>
       </View>
+      <Text
+        fontFamily="Inter"
+        fontSize="32px"
+        fontWeight="500"
+        color="rgba(13,26,38,1)"
+        lineHeight="48px"
+        textAlign="center"
+        display="block"
+        direction="column"
+        justifyContent="unset"
+        width="161px"
+        height="44px"
+        gap="unset"
+        alignItems="unset"
+        position="absolute"
+        top="24.06%"
+        bottom="62.19%"
+        left="29.23%"
+        right="29.49%"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="Code"
+        {...getOverrideProps(overrides, "Group")}
+      ></Text>
     </View>
   );
 }
