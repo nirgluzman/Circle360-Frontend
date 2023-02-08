@@ -20,7 +20,7 @@ export default function CircleSettingsHeader(props) {
   return (
     <View
       width="390px"
-      height="320px"
+      height="350px"
       display="block"
       gap="unset"
       alignItems="unset"
@@ -35,7 +35,7 @@ export default function CircleSettingsHeader(props) {
         width="350px"
         position="absolute"
         borderRadius="12px"
-        top="calc(50% - 23px - -103px)"
+        top="calc(50% - 23px - -122px)"
         left="calc(50% - 175px - 0px)"
         size="large"
         isDisabled={false}
@@ -58,16 +58,16 @@ export default function CircleSettingsHeader(props) {
       >
         <Icon
           width="16.33px"
-          height="14.91px"
+          height="16.3px"
           viewBox={{
             minX: 0,
             minY: 0,
             width: 16.32568359375,
-            height: 14.90673828125,
+            height: 16.304443359375,
           }}
           paths={[
             {
-              d: "M6.34884 3.97516L6.34884 0L0 6.95652L6.34884 13.913L6.34884 9.83851C10.8837 9.83851 14.0581 11.4286 16.3256 14.9068C15.4186 9.93789 12.6977 4.96894 6.34884 3.97516Z",
+              d: "M6.34884 4.34783L6.34884 0L0 7.6087L6.34884 15.2174L6.34884 10.7609C10.8837 10.7609 14.0581 12.5 16.3256 16.3043C15.4186 10.8696 12.6977 5.43478 6.34884 4.34783Z",
               fill: "rgba(13,26,38,1)",
               fillRule: "nonzero",
             },
@@ -77,8 +77,8 @@ export default function CircleSettingsHeader(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="20.06%"
-          bottom="17.83%"
+          top="31.7%"
+          bottom="0.36%"
           left="0%"
           right="85.68%"
           {...getOverrideProps(overrides, "BackIcon")}
@@ -107,15 +107,15 @@ export default function CircleSettingsHeader(props) {
         ></Text>
       </View>
       <Image
-        width="60px"
-        height="60px"
+        width="80px"
+        height="80px"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
         top="25px"
-        right="40px"
+        right="25px"
         borderRadius="160px"
         padding="0px 0px 0px 0px"
         objectFit="cover"
@@ -123,15 +123,15 @@ export default function CircleSettingsHeader(props) {
       ></Image>
       <View
         padding="0px 0px 0px 0px"
-        width="261px"
-        height="49.73px"
+        width="245px"
+        height="53.34px"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="168px"
-        left="62px"
+        top="133px"
+        left="58px"
         {...getOverrideProps(overrides, "Group 28")}
       >
         <Text
@@ -145,14 +145,14 @@ export default function CircleSettingsHeader(props) {
           direction="column"
           justifyContent="unset"
           width="216.77px"
-          height="43.73px"
+          height="47.83px"
           gap="unset"
           alignItems="unset"
           position="absolute"
-          top="12.07%"
+          top="10.33%"
           bottom="0%"
           left="0%"
-          right="16.95%"
+          right="11.52%"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Make this group Public"
@@ -162,7 +162,7 @@ export default function CircleSettingsHeader(props) {
           label="Off"
           position="absolute"
           top="0px"
-          left="209px"
+          left="193px"
           size="default"
           defaultChecked={false}
           isDisabled={false}
@@ -181,7 +181,7 @@ export default function CircleSettingsHeader(props) {
         direction="column"
         justifyContent="unset"
         width="161px"
-        height="44px"
+        height="48.13px"
         gap="unset"
         alignItems="unset"
         position="absolute"
@@ -193,6 +193,30 @@ export default function CircleSettingsHeader(props) {
         whiteSpace="pre-wrap"
         children="Code"
         {...getOverrideProps(overrides, "Group")}
+      ></Text>
+      <Text
+        fontFamily="Inter"
+        fontSize="48px"
+        fontWeight="500"
+        color="rgba(13,26,38,1)"
+        lineHeight="72px"
+        textAlign="center"
+        display="block"
+        direction="column"
+        justifyContent="unset"
+        width="219.49px"
+        height="75.78px"
+        gap="unset"
+        alignItems="unset"
+        position="absolute"
+        top="50%"
+        bottom="28.35%"
+        left="21.79%"
+        right="21.93%"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="ABC123"
+        {...getOverrideProps(overrides, "InvitationCode")}
       ></Text>
     </View>
   );

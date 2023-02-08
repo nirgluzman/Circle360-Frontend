@@ -67,7 +67,7 @@ export default function CircleContextProvider(props) {
     };
   }, [authStatus, incognito]);
 
-  // PUT location to DB
+  // update the user location in DB
   useEffect(() => {
     const updateLocationInDB = async () => {
       try {

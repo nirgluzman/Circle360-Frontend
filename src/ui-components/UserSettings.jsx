@@ -211,7 +211,6 @@ export default function UserSettings(props) {
         position="absolute"
         top="calc(50% - 110px - 155px)"
         left="calc(50% - 110px - 0px)"
-        border="2px SOLID rgba(10,207,131,1)"
         borderRadius="160px"
         padding="0px 0px 0px 0px"
         objectFit="cover"

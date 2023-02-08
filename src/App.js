@@ -5,6 +5,8 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import AuthPage from "./components/AuthPage";
 import DashboardPage from "./components/DashboardPage";
+import CircleSettingsPage from "./components/CircleSettingsPage";
+import UserSettingsPage from "./components/UserSettingsPage";
 
 // Amplify components & hooks ********************
 
@@ -27,6 +29,26 @@ function App() {
           element={
             authStatus === "authenticated" ? (
               <DashboardPage />
+            ) : (
+              <Navigate to="/" />
+            )
+          }
+        />
+        <Route
+          path="/circlesettings"
+          element={
+            authStatus === "authenticated" ? (
+              <CircleSettingsPage />
+            ) : (
+              <Navigate to="/" />
+            )
+          }
+        />
+        <Route
+          path="/usersettings"
+          element={
+            authStatus === "authenticated" ? (
+              <UserSettingsPage />
             ) : (
               <Navigate to="/" />
             )

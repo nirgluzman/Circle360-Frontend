@@ -34,7 +34,7 @@ html {
   /* For mobile phones: */
   .map-container {
     align-self: center;
-    width: 80vw;
+    width: 50vw;
     height: 30vh;
     margin: 10 auto;
   }

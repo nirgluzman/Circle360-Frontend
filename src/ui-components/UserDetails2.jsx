@@ -76,15 +76,15 @@ export default function UserDetails2(props) {
         {...getOverrideProps(overrides, "Title")}
       ></Text>
       <Image
-        width="60px"
-        height="60px"
+        width="80px"
+        height="80px"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
         top="25px"
-        right="40px"
+        right="25px"
         borderRadius="160px"
         padding="0px 0px 0px 0px"
         objectFit="cover"

@@ -1,8 +1,7 @@
 /* global google */
-import logo from "../images/logo.png";
 import uuid from "react-uuid";
-import { useEffect, useState, useMemo, useContext } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { CircleContext } from "../contexts/CircleContext";
 import { Flex } from "@aws-amplify/ui-react";
@@ -100,8 +99,7 @@ export default function DashboardPage() {
               },
               ConfigIcon: {
                 className: "custom-btn",
-                onClick: () =>
-                  navigate(`/circleSettings/${item.groupID.groupCode}`),
+                onClick: () => navigate("/circlesettings"),
               },
             }}
           />

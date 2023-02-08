@@ -19,6 +19,7 @@ export declare type CircleSettingsHeaderOverridesProps = {
     GroupName?: PrimitiveOverrideProps<TextProps>;
     PushSwitchField?: PrimitiveOverrideProps<SwitchFieldProps>;
     Group?: PrimitiveOverrideProps<TextProps>;
+    InvitationCode?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type CircleSettingsHeaderProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: CircleSettingsHeaderOverridesProps | undefined | null;
