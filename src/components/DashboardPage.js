@@ -44,7 +44,7 @@ export default function DashboardPage() {
     CreateNewButton: {
       className: "custom-btn",
       //isDisabled: myGroups.length > 4,
-      onClick: () => navigate("/circlesettings"),
+      onClick: () => navigate("/creategroup"),
     },
   };
 
@@ -95,10 +95,10 @@ export default function DashboardPage() {
                 children: g.name,
                 onClick: () => getMembersLocations(g.groupID.groupCode),
               },
-              DeleteIcon: {
-                className: "custom-btn",
-                onClick: () => navigate("/"),
-              },
+              // DeleteIcon: {
+              //   className: "custom-btn",
+              //   onClick: () => navigate("/"),
+              // },
               ConfigIcon: {
                 className: "custom-btn",
                 onClick: () => {

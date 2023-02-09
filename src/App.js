@@ -5,6 +5,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import AuthPage from "./components/AuthPage";
 import DashboardPage from "./components/DashboardPage";
+import CreateGroupPage from "./components/CreateGroupPage";
 import CircleSettingsPage from "./components/CircleSettingsPage";
 import UserSettingsPage from "./components/UserSettingsPage";
 
@@ -29,6 +30,16 @@ function App() {
           element={
             authStatus === "authenticated" ? (
               <DashboardPage />
+            ) : (
+              <Navigate to="/" />
+            )
+          }
+        />
+        <Route
+          path="/creategroup"
+          element={
+            authStatus === "authenticated" ? (
+              <CreateGroupPage />
             ) : (
               <Navigate to="/" />
             )
