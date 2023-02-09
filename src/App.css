@@ -16,7 +16,7 @@ html {
 
 .map-container {
   align-self: center;
-  width: 30vw;
+  width: 80vw;
   height: 30vh;
   margin: 10 auto;
 }
@@ -30,12 +30,12 @@ html {
     margin: 10 auto;
   }
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (min-width: 430px) {
   /* For mobile phones: */
   .map-container {
     align-self: center;
-    width: 50vw;
-    height: 30vh;
+    width: 80vw;
+    height: 40vh;
     margin: 10 auto;
   }
 }
