@@ -8,7 +8,7 @@ import { GoogleMap, InfoWindow, Marker } from "@react-google-maps/api";
 //let markers = [];
 export default function Map() {
   const groupInfo = useContext(CircleContext);
-  const { email, location, selectedGroup } = groupInfo;
+  const { email, location, selectedGroupLocations } = groupInfo;
 
   const [activeMarker, setActiveMarker] = useState(null);
 
@@ -21,7 +21,7 @@ export default function Map() {
 
   const handleOnLoad = (map) => {
     const bounds = new google.maps.LatLngBounds();
-    selectedGroup?.forEach((m) => bounds.extend(m.userID.location));
+    selectedGroupLocations?.forEach((m) => bounds.extend(m.userID.location));
     map.fitBounds(bounds);
   };
 
@@ -36,7 +36,7 @@ export default function Map() {
         zoom={10}
       >
         {location && <Marker position={location} />}
-        {selectedGroup.map((m) =>
+        {selectedGroupLocations?.map((m) =>
           email !== m.userID.email ? (
             <Marker
               key={m.userID.email}

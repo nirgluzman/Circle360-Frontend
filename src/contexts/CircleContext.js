@@ -18,12 +18,14 @@ export default function CircleContextProvider(props) {
   const [location, setLocation] = useState({ lat: 0, lng: 0 });
   const [radius, setRadius] = useState("");
   const [myGroups, setMyGroups] = useState([]);
-  const [selectedGroup, setSelectedGroup] = useState([]);
+  const [selectedGroupLocations, setSelectedGroupLocations] = useState([]);
+  const [selectedGroupName, setSelectedGroupName] = useState("");
   const [activeGroupCode, setActiveGroupCode] = useState("");
   const [geoStatus, setGeoStatus] = useState("");
   const [enableNotifications, setEnableNotifications] = useState("");
+  const [selectedGroupMembers, setSelectedGroupMembers] = useState([]);
 
-  const locationUpdateFreq = 5000;
+  const locationUpdateFreq = 1000;
   let intervalLocationId;
   let intervalGroupId;
 
@@ -163,10 +165,14 @@ export default function CircleContextProvider(props) {
         location,
         setMyGroups,
         myGroups,
-        selectedGroup,
-        setSelectedGroup,
+        selectedGroupLocations,
+        setSelectedGroupLocations,
         activeGroupCode,
         setActiveGroupCode,
+        setSelectedGroupMembers,
+        selectedGroupMembers,
+        setSelectedGroupName,
+        selectedGroupName,
       }}
     >
       {props.children}

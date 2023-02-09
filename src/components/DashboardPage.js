@@ -17,8 +17,13 @@ export default function DashboardPage() {
   const [user, setUser] = useState({});
 
   const userInfo = useContext(CircleContext);
-  const { setActiveGroupCode, setSelectedGroup, myGroups, profilePictureURL } =
-    userInfo;
+  const {
+    setActiveGroupCode,
+    setSelectedGroupLocations,
+    myGroups,
+    setSelectedGroupName,
+    profilePictureURL,
+  } = userInfo;
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -33,19 +38,18 @@ export default function DashboardPage() {
 
     JoinButton: {
       className: "custom-btn",
-      //isDisabled: myCircles.length > 4,
+      //isDisabled: myGroups.length > 4,
       onClick: () => navigate("/joincircle"),
     },
     CreateNewButton: {
       className: "custom-btn",
-      //isDisabled: myCircles.length > 4,
+      //isDisabled: myGroups.length > 4,
       onClick: () => navigate("/circlesettings"),
     },
   };
 
   const getMembersLocations = async (code) => {
     try {
-      console.log(code);
       const token = JSON.parse(localStorage.getItem("user")).token;
       const res = await fetch(
         `${process.env.REACT_APP_API_URL}/group/${code}/locations`,
@@ -58,7 +62,7 @@ export default function DashboardPage() {
         }
       );
       const data = await res.json();
-      setSelectedGroup(data.message.group);
+      setSelectedGroupLocations(data.message.group);
       setActiveGroupCode(code);
     } catch (error) {
       console.log(error);
@@ -78,20 +82,18 @@ export default function DashboardPage() {
   //   ).toFixed(2);
   // }
 
-  console.log(myGroups);
-
   return (
     <Flex justifyContent="center" alignItems="center" direction="column">
       <DashboardHeader overrides={DashboardPageOverrides} />
 
-      {myGroups?.map((item) => (
+      {myGroups?.map((g) => (
         <div key={uuid()}>
           <DashboardCircle
             key={uuid()}
             overrides={{
               CircleName: {
-                children: item.name,
-                onClick: () => getMembersLocations(item.groupID.groupCode),
+                children: g.name,
+                onClick: () => getMembersLocations(g.groupID.groupCode),
               },
               DeleteIcon: {
                 className: "custom-btn",
@@ -99,7 +101,11 @@ export default function DashboardPage() {
               },
               ConfigIcon: {
                 className: "custom-btn",
-                onClick: () => navigate("/circlesettings"),
+                onClick: () => {
+                  setSelectedGroupName(g.name);
+                  setActiveGroupCode(g.groupID.groupCode);
+                  navigate("/circlesettings");
+                },
               },
             }}
           />

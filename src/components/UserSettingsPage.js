@@ -23,8 +23,8 @@ export default function UserSettingsPage() {
     try {
       setError(null);
       const token = JSON.parse(localStorage.getItem("user")).token;
-      const res = await axios({
-        method: "delete",
+      await axios({
+        method: "DELETE",
         url: `${process.env.REACT_APP_API_URL}/user`,
         headers: {
           "Content-Type": "application/json",
